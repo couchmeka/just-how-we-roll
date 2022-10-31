@@ -432,20 +432,24 @@ function compareNumbers(a, b) {
 
 
 //function mode
-function mode(array){
-array.sort(compareNumbers)//lowest to highest
-let mode = 0;
-let holder = array[0]; //indexing array
-
-for (let num of array){
-   
-    if(holder === num)
-     mode += item; 
-    
-}
-
-return mode
-
-}
-
-
+function mode(array) {
+    let frequency = []; // array of frequency.
+    let maxFreq = 0; // holds the max frequency.
+    let modes = [];
+  
+    for (let item in array) {
+      frequency[array[item]] = (frequency[array[item]] || 0) + 1; // increment frequency.
+  
+      if (frequency[array[item]] > maxFreq) { // is this frequency > max so far 
+        maxFreq = frequency[array[item]]; // update max.
+      }
+    }
+  
+    for (let num in frequency) {
+      if (frequency[num] === maxFreq) {
+        modes.push(num);
+      }
+    }
+  
+    return modes;
+  }
