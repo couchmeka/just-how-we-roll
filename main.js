@@ -447,3 +447,5 @@ for (let num of array){
 return mode
 
 }
+
+
