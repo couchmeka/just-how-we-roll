@@ -84,6 +84,7 @@ resetButton.addEventListener('click', function(){
 
 function reset(){
 //empty global arrays
+sound();
 sixes = [];
 doubleSixes = [];
 twelves = [];
@@ -123,6 +124,7 @@ d6DiceImg.addEventListener('click', function(){
 
     let random = getRandomNumber(6);
     sixes.push(random);
+    sound();
     
     if (random === 6){
     
@@ -165,7 +167,7 @@ d6DiceImg.addEventListener('click', function(){
         let randomDice2 = getRandomNumber(6);
         let total = randomDice1 + randomDice2;
         doubleSixes.push(total);
-        
+        sound();
     
         //Dice one
         if (randomDice1 === 6){
@@ -224,7 +226,7 @@ d6DiceImg.addEventListener('click', function(){
     d12DiceImg.addEventListener('click', function(){
         let random12 = getRandomNumber(12);
         twelves.push(random12);
-    
+        sound();
         
         if (random12 === 12){
         
@@ -286,7 +288,8 @@ d6DiceImg.addEventListener('click', function(){
     d20DiceImg.addEventListener('click', function(){
         let random20 = getRandomNumber(20);
         twenties.push(random20);
-    
+        sound();
+
         if (random20 === 20){
     
             d20DiceImg.src ="images/numbers/20.png";
@@ -437,19 +440,31 @@ function mode(array) {
     let maxFreq = 0; // holds the max frequency.
     let modes = [];
   
-    for (let item in array) {
+    for (let item in array) 
+    {
       frequency[array[item]] = (frequency[array[item]] || 0) + 1; // increment frequency.
   
-      if (frequency[array[item]] > maxFreq) { // is this frequency > max so far 
+    // is this frequency > max so far 
+    if(frequency[array[item]] > maxFreq)
+         { 
         maxFreq = frequency[array[item]]; // update max.
-      }
+         }
     }
   
-    for (let num in frequency) {
-      if (frequency[num] === maxFreq) {
+    for (let num in frequency)
+    {
+    if(frequency[num] === maxFreq) 
+        {
         modes.push(num);
-      }
+        }
     }
   
     return modes;
   }
+
+//function sound 
+function sound(){
+let audio = new Audio('images/sound/dice_shake-96201.mp3');
+audio.play();
+}
+
