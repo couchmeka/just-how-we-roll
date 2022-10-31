@@ -172,41 +172,41 @@ d6DiceImg.addEventListener('click', function(){
         //Dice one
         if (randomDice1 === 6){
     
-            dbD6DiceImg1.src ="images/d6/6.png"
+            dbD6DiceImg1.src ="images/d6/6.png";
         } else if (randomDice1 === 5){
         
-            dbD6DiceImg1.src ="images/d6/5.png"
+            dbD6DiceImg1.src ="images/d6/5.png";
         } else if (randomDice1 === 4){
             
-            dbD6DiceImg1.src ="images/d6/4.png"
+            dbD6DiceImg1.src ="images/d6/4.png";
         } else if (randomDice1 === 3){
             
-            dbD6DiceImg1.src ="images/d6/3.png"
+            dbD6DiceImg1.src ="images/d6/3.png";
         } else if (randomDice1 === 2){
             
-            dbD6DiceImg1.src ="images/d6/2.png"
+            dbD6DiceImg1.src ="images/d6/2.png";
         } else if (randomDice1 === 1){
-            dbD6DiceImg1.src ="images/d6/1.png"
+            dbD6DiceImg1.src ="images/d6/1.png";
         }
     
         //Dice Two 
             if (randomDice2 === 6){
         
-                dbD6DiceImg2.src ="images/d6/6.png"
+                dbD6DiceImg2.src ="images/d6/6.png";
             } else if (randomDice2 === 5){
             
-                dbD6DiceImg2.src ="images/d6/5.png"
+                dbD6DiceImg2.src ="images/d6/5.png";
             } else if (randomDice2 === 4){
                 
-                dbD6DiceImg2.src ="images/d6/4.png"
+                dbD6DiceImg2.src ="images/d6/4.png";
             } else if (randomDice2 === 3){
                 
-                dbD6DiceImg2.src ="images/d6/3.png"
+                dbD6DiceImg2.src ="images/d6/3.png";
             } else if (randomDice2 === 2){
                 
-                dbD6DiceImg2.src ="images/d6/2.png"
+                dbD6DiceImg2.src ="images/d6/2.png";
             } else if (randomDice2 === 1){
-                dbD6DiceImg2.src ="images/d6/1.png"
+                dbD6DiceImg2.src ="images/d6/1.png";
             }
             //mean
             let meanAv = mean(doubleSixes);
@@ -215,8 +215,8 @@ d6DiceImg.addEventListener('click', function(){
             let medianAv = median(doubleSixes);
             dbD6median.innerText = String(medianAv);
             //mode
-            let modeAv = mode(doubleSixes)
-            dbD6mode.innerText = String(modeAv)
+            let modeAv = mode(doubleSixes);
+            dbD6mode.innerText = String(modeAv);
     
     }) 
     
@@ -230,40 +230,40 @@ d6DiceImg.addEventListener('click', function(){
         
         if (random12 === 12){
         
-            d12DiceImg.src ="images/numbers/12.png"
+            d12DiceImg.src ="images/numbers/12.png";
         } else if (random12 === 11){
         
-            d12DiceImg.src ="images/numbers/11.png"
+            d12DiceImg.src ="images/numbers/11.png";
         } else if (random12 === 10){
             
-            d12DiceImg.src ="images/numbers/10.png"
+            d12DiceImg.src ="images/numbers/10.png";
         } else if (random12 === 9){
             
-            d12DiceImg.src ="images/numbers/9.png"
+            d12DiceImg.src ="images/numbers/9.png";
         } else if (random12 === 8){
             
-            d12DiceImg.src ="images/numbers/8.png"
+            d12DiceImg.src ="images/numbers/8.png";
         } else if (random12 === 7){
     
-            d12DiceImg.src ="images/numbers/7.png"
+            d12DiceImg.src ="images/numbers/7.png";
         } else if (random12 === 6){
         
-            d12DiceImg.src ="images/numbers/6.png"
+            d12DiceImg.src ="images/numbers/6.png";
         } else if (random12 === 5){
             
-            d12DiceImg.src ="images/numbers/5.png"
+            d12DiceImg.src ="images/numbers/5.png";
         } else if (random12 === 4){
             
-            d12DiceImg.src ="images/numbers/4.png"
+            d12DiceImg.src ="images/numbers/4.png";
         } else if (random12 === 3){
             
-            d12DiceImg.src ="images/numbers/3.png"
+            d12DiceImg.src ="images/numbers/3.png";
         } else if (random12 === 2){
             
-            d12DiceImg.src ="images/numbers/2.png"
+            d12DiceImg.src ="images/numbers/2.png";
         } else if (random12 === 1){
             
-            d12DiceImg.src ="images/numbers/1.png"
+            d12DiceImg.src ="images/numbers/1.png";
         }
 
         //mean
@@ -276,7 +276,7 @@ d6DiceImg.addEventListener('click', function(){
 
         //mode
         let modeAv = mode(twelves);
-        d12mode.innerText = String(modeAv)
+        d12mode.innerText = String(modeAv);
     
     })
     
@@ -381,7 +381,7 @@ let mean = 0;
     mean = total / array.length;
  }
 
- return mean
+ return mean;
  
 }
 
@@ -461,6 +461,8 @@ function mode(array) {
   
     return modes;
   }
+
+  
 
 //function sound 
 function sound(){
