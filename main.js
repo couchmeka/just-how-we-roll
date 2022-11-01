@@ -119,6 +119,7 @@ d20mode.innerText = "";
 /****************************
  * CLICK HANDLING FUNCTIONS *
 ****************************/
+
 //Dice 6 event listner
 d6DiceImg.addEventListener('click', function(){
 
@@ -391,16 +392,25 @@ let mean = 0;
 function median(array){
 
 let newArray = [];
-let location = 0;
+let evenLocation1 = 0;
+let evenLocation2 = 0;
 let median = 0;
 let twoMedian = 0;
 
 
-newArray = array.sort(compareNumbers)
+newArray = array.sort(function(a,b){
+    return a-b;
+  });
   
 
+    if (newArray.length === 0) {
 
-    if(newArray.length === 2 ){
+    return 0;
+    } else if (newArray.length === 1){
+
+    return newArray[0];
+
+    } else if(newArray.length === 2){
 
     median = newArray[0] + newArray[1];
     twoMedian = median / 2;
@@ -408,14 +418,18 @@ newArray = array.sort(compareNumbers)
 
   } else if(newArray.length % 2 === 0){
     
-    let evenLocation1 = newArray.length / 2 + 1;
-    let evenLocation2 = newArray.length / 2;
-    median = newArray[evenLocation1] + newArray[evenLocation2] / 2;
+    evenLocation1 = newArray.length / 2 + 1;
+    evenLocation2 = newArray.length / 2;
+    median = newArray[evenLocation1] + newArray[evenLocation2];
+    median = median / 2;
+
     return median;
 
   } else {
 
-     let median = newArray.length / 2 + .5;
+    let median = newArray.length / 2 + 0.5;
+    median = newArray[median];
+     
      return median;
 
   }
