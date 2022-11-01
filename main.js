@@ -30,7 +30,7 @@ const getRandomNumber = function(max) {
 /*******************
  * EVENT LISTENERS *
  *******************/
-//resetbutton Que
+//resetbutton Query
 let resetButton = document.querySelector("#reset-button");
 
 
@@ -39,6 +39,7 @@ let d6mean = document.querySelector("#d6-rolls-mean");
 let dbD6mean = document.querySelector("#double-d6-rolls-mean");
 let d12mean = document.querySelector("#d12-rolls-mean");
 let d20mean = document.querySelector("#d20-rolls-mean");
+
 //median queries
 let d6median = document.querySelector("#d6-rolls-median");
 let dbD6median = document.querySelector("#double-d6-rolls-median");
@@ -416,7 +417,7 @@ newArray = array.sort(function(a,b){
     twoMedian = median / 2;
     return twoMedian;
 
-  } else if(newArray.length % 2 === 0){
+    } else if(newArray.length % 2 === 0){
     
     evenLocation1 = newArray.length / 2 + 1;
     evenLocation2 = newArray.length / 2;
@@ -454,7 +455,7 @@ function mode(array) {
     let maxFreq = 0; // holds the max frequency.
     let modes = [];
   
-    for (let item of array) 
+    for (let item in array) 
     {
       frequency[array[item]] = (frequency[array[item]] || 0) + 1; // increment frequency.
   
@@ -465,7 +466,7 @@ function mode(array) {
          }
     }
   
-    for (let num of frequency)
+    for (let num in frequency)
     {
     if(frequency[num] === maxFreq) 
         {

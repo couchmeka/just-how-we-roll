@@ -100,25 +100,16 @@
 
 #d6-roll:hover
 {
-    -webkit-animation: swing 1s ease;
-    animation: swing 1s ease;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+    rotate: 1.75turn;
 }
 #double-d6-roll-1:hover
 {
-    -webkit-animation: swing 1s ease;
-    animation: swing 1s ease;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+    rotate: 1.75turn;
 }
 
 #double-d6-roll-2:hover
 {
-    -webkit-animation: swing 1s ease;
-    animation: swing 1s ease;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+    rotate: 1.75turn;
 }
 
 #d12-roll:hover
