@@ -454,7 +454,7 @@ function mode(array) {
     let maxFreq = 0; // holds the max frequency.
     let modes = [];
   
-    for (let item in array) 
+    for (let item of array) 
     {
       frequency[array[item]] = (frequency[array[item]] || 0) + 1; // increment frequency.
   
@@ -465,7 +465,7 @@ function mode(array) {
          }
     }
   
-    for (let num in frequency)
+    for (let num of frequency)
     {
     if(frequency[num] === maxFreq) 
         {
